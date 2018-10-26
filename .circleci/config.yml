@@ -40,3 +40,5 @@ jobs:
             # run tests!
             - run: mvn integration-test
 
+            - deploy: mvn -s settings.xml -DskipTests deploy
+
