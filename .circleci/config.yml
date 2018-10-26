@@ -41,5 +41,5 @@ jobs:
             - run: mvn integration-test
 
             - deploy:
-                  command: mvn -s settings.xml -DskipTests deploy
+                  command: mvn -s ./.circleci/settings.xml -DskipTests deploy
 
