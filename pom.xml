@@ -45,6 +45,14 @@
         </license>
     </licenses>
 
+    <developers>
+        <developer>
+            <name>John Thompson</name>
+            <email>john.thompson@velopayments.com</email>
+            <organization>Velo Payments Inc</organization>
+            <url>https://velopayments.com/</url>
+        </developer>
+    </developers>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
