@@ -26,6 +26,9 @@ import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
+/**
+ * Response object from Get Payor API
+ */
 @Data
 @Builder
 @NoArgsConstructor
