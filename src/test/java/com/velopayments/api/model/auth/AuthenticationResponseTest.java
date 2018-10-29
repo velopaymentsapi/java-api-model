@@ -18,9 +18,10 @@
 
 package com.velopayments.api.model.auth;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.velopayments.api.model.ModelTest;
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -28,16 +29,15 @@ import java.nio.charset.Charset;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class AuthenticationResponseTest {
+class AuthenticationResponseTest extends ModelTest {
 
-    String jsonString;
-    ObjectMapper objectMapper = new ObjectMapper();
 
     @BeforeEach
     void setUp() throws IOException {
         jsonString = IOUtils.resourceToString("/auth/authresponse.json", Charset.forName("UTF-8"));
     }
 
+    @DisplayName("Test JSON Parse of Auth Response")
     @Test
     void testJsonParse() throws IOException {
         AuthenticationResponse response = objectMapper.readValue(jsonString, AuthenticationResponse.class);

@@ -1,0 +1,26 @@
+{
+  "payorId" : "ce24ad3d-bc10-4f22-99c5-3aabd3d65c78",
+  "payorName" : "Payor1",
+  "address" : {
+    "line1" : "101 California Street",
+    "line2" : null,
+    "line3" : null,
+    "line4" : null,
+    "city" : "San Francisco",
+    "countyOrProvince" : "California",
+    "zipOrPostcode" : "94111",
+    "country" : "US"
+  },
+  "primaryContactName" : "Foo Name",
+  "primaryContactPhone" : "+1234567890",
+  "primaryContactEmail" : "foo@example.com",
+  "kycState" : "REQUIRES_KYC",
+  "manualLockout" : false,
+  "payeeGracePeriodProcessingEnabled" : true,
+  "payeeGracePeriodDays" : 90,
+  "dbaName" : "Payor1 DBA",
+  "allowsLanguageChoice" : false,
+  "reminderEmailsOptOut" : false,
+  "language" : "FR",
+  "includesReports" : false
+}
