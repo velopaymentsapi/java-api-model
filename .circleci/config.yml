@@ -40,5 +40,5 @@ jobs:
             # run tests!
             - run: mvn integration-test
 
-            - run: curl -u ${CIRCLE_API_USER_TOKEN} https://circleci.com/api/v1.1/project/github/velopaymentsapi/velo-java-sdk/tree/master
+            - run: curl -X POST -u ${CIRCLE_API_USER_TOKEN} https://circleci.com/api/v1.1/project/github/velopaymentsapi/velo-java-sdk/tree/master
 
