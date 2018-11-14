@@ -34,7 +34,7 @@ class AuthenticationResponseTest extends ModelTest {
 
     @BeforeEach
     void setUp() throws IOException {
-        jsonString = IOUtils.resourceToString("/auth/authresponse.json", Charset.forName("UTF-8"));
+        jsonString = IOUtils.resourceToString("/com/velopayments/sdk/auth/authresponse.json", Charset.forName("UTF-8"));
     }
 
     @DisplayName("Test JSON Parse of Auth Response")
