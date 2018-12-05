@@ -25,6 +25,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @Data
@@ -59,4 +60,5 @@ public class PaymentResponse {
     private UUID paymentChannelId;
     private String paymentChannelName;
     private String accountName;
+    private List<PaymentEventResponse> events;
 }
