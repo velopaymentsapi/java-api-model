@@ -37,7 +37,7 @@ public class PayoutSummary {
 
     private UUID payoutId;
     private UUID payorId;
-    private PayoutStatus status;
+    private String status;
     private ZonedDateTime submittedDateTime;
     private ZonedDateTime instructedDateTime;
     private Long totalPayments;

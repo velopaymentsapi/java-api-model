@@ -24,24 +24,22 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
-import java.time.ZonedDateTime;
-import java.util.UUID;
 
+/**
+ * Created by jt on 2019-06-19.
+ */
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class FxSummary {
+public class RejectedPayment {
+    private String remoteId;
+    private String currencyType;
+    private BigDecimal amount;
+    private String sourceAccountName;
+    private String payorPaymentId;
+    private String reason;
+    private Long lineNumber;
 
-    private UUID quoteId;
-    private ZonedDateTime expiryTime;
-    private ZonedDateTime creationDateTime;
-    private BigDecimal rate;
-    private BigDecimal invertedRate;
-    private Long totalSourceAmount;
-    private Long totalPaymentAmount;
-    private String sourceCurrency;
-    private String paymentCurrency;
-    private String status;
-    private String fundingStatus;
+
 }

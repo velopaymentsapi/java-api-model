@@ -32,7 +32,8 @@ import java.util.UUID;
 @AllArgsConstructor
 public class SourceAccountSummary {
 
+    private String sourceAccountName;
     private UUID sourceAccountId;
-    private Long totalCost;
     private String currency;
+    private Long totalPayoutCost;
 }
