@@ -16,32 +16,30 @@
  *
  */
 
-package com.velopayments.api.model.payment;
+package com.velopayments.api.model.paymentaudit.v3;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
 import java.time.ZonedDateTime;
-import java.util.UUID;
+
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class FxSummary {
+public class PayoutResponseSummary {
 
-    private UUID quoteId;
-    private ZonedDateTime expiryTime;
-    private ZonedDateTime creationDateTime;
-    private BigDecimal rate;
-    private BigDecimal invertedRate;
-    private Long totalSourceAmount;
-    private Long totalPaymentAmount;
-    private String sourceCurrency;
-    private String paymentCurrency;
-    private String status;
-    private String fundingStatus;
+    private PayoutStatus payoutStatus;
+    private ZonedDateTime submittedDateTime;
+    private ZonedDateTime instructedDateTime;
+    private ZonedDateTime withdrawnDateTime;
+    private String payoutMemo;
+    private Long totalPayments;
+    private Long confirmedPayments;
+    private Long releasedPayments;
+    private Long incompletePayments;
+    private Long failedPayments;
 }

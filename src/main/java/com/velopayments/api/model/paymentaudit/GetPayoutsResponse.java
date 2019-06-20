@@ -16,8 +16,26 @@
  *
  */
 
-package com.velopayments.api.model.payment;
+package com.velopayments.api.model.paymentaudit;
 
-public enum  PayoutStatus {
-    ACCEPTED, REJECTED, SUBMITTED, QUOTED, INSTRUCTED, COMPLETED, INCOMPLETE, CONFIRMED, WITHDRAWN
+
+import com.velopayments.api.model.Link;
+import com.velopayments.api.model.Page;
+import com.velopayments.api.model.paymentaudit.v3.PayoutResponseSummary;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class GetPayoutsResponse {
+    private List<Link> links;
+    private Page page;
+    private List<PayoutResponseSummary> content;
+
 }

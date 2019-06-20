@@ -16,7 +16,7 @@
  *
  */
 
-package com.velopayments.api.model.payment;
+package com.velopayments.api.model.paymentaudit.v3;
 
 public enum  PaymentEventType {
     PAYOUT_SUBMITTED,
@@ -32,8 +32,10 @@ public enum  PaymentEventType {
     PAYMENT_FUNDED,
     PAYMENT_UNFUNDED,
     PAYMENT_FAILED,
+    PAYMENT_REJECTED,
     ACH_SUBMITTED_TO_ODFI,
     PAYMENT_ACCEPTED_BY_RAILS,
+    PAYMENT_RETURNED_BY_RAILS,
     ACH_RETURN_RECEIVED,
     RETURN_PAYMENT_FUNDING_REQUESTED,
     PAYOUT_BATCH_EXECUTED,
@@ -47,5 +49,7 @@ public enum  PaymentEventType {
     PAYOUT_BATCH_QUOTED,
     PAYOUT_QUOTED,
     ACH_PAYMENT_RETURN_CANCELLED,
-    RETURN_PAYMENT_CANCELLATION_REQUESTED
+    RETURN_CANCELLED,
+    RETURN_PAYMENT_CANCELLATION_REQUESTED,
+    PAYOUT_WITHDRAWN
 }

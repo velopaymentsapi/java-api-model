@@ -16,24 +16,17 @@
  *
  */
 
-package com.velopayments.api.model.payment;
+package com.velopayments.api.model.paymentaudit.v3;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.util.UUID;
-
-
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class SourceAccountSummary {
-
-    private String sourceAccountName;
-    private UUID sourceAccountId;
-    private String currency;
-    private Long totalPayoutCost;
+public enum PaymentStatus {
+    ACCEPTED,
+    AWAITING_FUNDS,
+    FUNDED,
+    UNFUNDED,
+    BANK_PAYMENT_REQUESTED,
+    REJECTED,
+    ACCEPTED_BY_RAILS,
+    CONFIRMED,
+    FAILED,
+    WITHDRAWN
 }

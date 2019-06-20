@@ -16,16 +16,8 @@
  *
  */
 
-package com.velopayments.api.model.payment;
+package com.velopayments.api.model.paymentaudit.v3;
 
-public enum PaymentStatus {
-    ACCEPTED,
-    AWAITING_FUNDS,
-    FUNDED,
-    UNFUNDED,
-    BANK_PAYMENT_REQUESTED,
-    REJECTED,
-    ACCEPTED_BY_RAILS,
-    CONFIRMED,
-    FAILED
+public enum QuoteStatus {
+    UNQUOTED, QUOTED, EXPIRED, EXECUTED
 }

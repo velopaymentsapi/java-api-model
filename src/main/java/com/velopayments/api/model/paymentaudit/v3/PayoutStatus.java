@@ -16,30 +16,8 @@
  *
  */
 
-package com.velopayments.api.model.payment;
+package com.velopayments.api.model.paymentaudit.v3;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.math.BigDecimal;
-
-/**
- * Created by jt on 2019-06-19.
- */
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class RejectedPayment {
-    private String remoteId;
-    private String currencyType;
-    private BigDecimal amount;
-    private String sourceAccountName;
-    private String payorPaymentId;
-    private String reason;
-    private Long lineNumber;
-
-
+public enum  PayoutStatus {
+    ACCEPTED, REJECTED, SUBMITTED, QUOTED, INSTRUCTED, COMPLETED, INCOMPLETE, CONFIRMED, WITHDRAWN
 }

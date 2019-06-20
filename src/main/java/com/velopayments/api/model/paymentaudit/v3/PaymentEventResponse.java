@@ -16,7 +16,7 @@
  *
  */
 
-package com.velopayments.api.model.payment;
+package com.velopayments.api.model.paymentaudit.v3;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

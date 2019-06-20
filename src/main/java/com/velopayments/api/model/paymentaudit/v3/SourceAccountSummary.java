@@ -16,8 +16,23 @@
  *
  */
 
-package com.velopayments.api.model.payment;
+package com.velopayments.api.model.paymentaudit.v3;
 
-public enum  BatchFundingStatus {
-    FUNDED, INSTRUCTED, UNFUNDED
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.UUID;
+
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class SourceAccountSummary {
+
+    private UUID sourceAccountId;
+    private Long totalCost;
+    private String currency;
 }

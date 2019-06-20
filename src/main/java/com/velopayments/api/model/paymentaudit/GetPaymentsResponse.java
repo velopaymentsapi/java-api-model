@@ -16,10 +16,11 @@
  *
  */
 
-package com.velopayments.api.model.payment;
+package com.velopayments.api.model.paymentaudit;
 
 import com.velopayments.api.model.Link;
 import com.velopayments.api.model.Page;
+import com.velopayments.api.model.paymentaudit.v3.PaymentResponse;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
