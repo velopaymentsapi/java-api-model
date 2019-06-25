@@ -21,7 +21,7 @@ package com.velopayments.api.model.paymentaudit;
 
 import com.velopayments.api.model.Link;
 import com.velopayments.api.model.Page;
-import com.velopayments.api.model.paymentaudit.v3.PayoutResponseSummary;
+import com.velopayments.api.model.paymentaudit.v3.PayoutSummary;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -36,6 +36,5 @@ import java.util.List;
 public class GetPayoutsResponse {
     private List<Link> links;
     private Page page;
-    private List<PayoutResponseSummary> content;
-
+    private List<PayoutSummary> content;
 }
