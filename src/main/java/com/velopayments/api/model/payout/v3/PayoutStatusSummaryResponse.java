@@ -17,9 +17,9 @@ import java.util.UUID;
 public class PayoutStatusSummaryResponse {
     protected UUID payoutId;
     protected String status;
-    protected int paymentsSubmitted;
-    protected int paymentsAccepted;
-    protected int paymentsRejected;
+    protected Integer paymentsSubmitted;
+    protected Integer paymentsAccepted;
+    protected Integer paymentsRejected;
     protected List<FxSummary> fxSummaries;
     protected List<AccountCost> accounts;
     private List<RejectedPayment> rejectedPayments;
