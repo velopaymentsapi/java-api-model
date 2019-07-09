@@ -203,7 +203,7 @@
     </profiles>
     <scm>
         <connection>scm:git:https://github.com/velopaymentsapi/java-api-model.git</connection>
-        <developerConnection>scm:git:https://github.com/velopaymentsapi/java-api-model.git</developerConnection>
+        <developerConnection>scm:git:git@github.com:velopaymentsapi/java-api-model.git</developerConnection>
         <url>https://github.com/velopaymentsapi/java-api-model</url>
         <tag>HEAD</tag>
     </scm>
