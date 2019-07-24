@@ -18,7 +18,8 @@ public class RejectedPayment {
     private Long amount;
     private String sourceAccountName;
     private String payorPaymentId;
-    private ReasonType reason;
+    private ReasonType reasonCode;
+    private String reason;
     private Long lineNumber;
     private String message;
     private SubReasonType subReasonType;
