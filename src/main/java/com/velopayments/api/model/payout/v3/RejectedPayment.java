@@ -1,6 +1,5 @@
 package com.velopayments.api.model.payout.v3;
 
-import com.velopayments.api.model.payout.ReasonType;
 import com.velopayments.api.model.payout.SubReasonType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,7 +17,7 @@ public class RejectedPayment {
     private Long amount;
     private String sourceAccountName;
     private String payorPaymentId;
-    private ReasonType reasonCode;
+    private String reasonCode;
     private String reason;
     private Long lineNumber;
     private String message;
