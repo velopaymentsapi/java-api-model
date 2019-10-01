@@ -21,4 +21,5 @@ public class FundingSummary {
     private String fundingAccountName;
     private FundingType fundingType;
     private List<FundingEventResponse> events;
+    private String topupType;
 }
