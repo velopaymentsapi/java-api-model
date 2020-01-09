@@ -1,5 +1,7 @@
 package com.velopayments.api.model.payout.v3;
 
+import com.velopayments.api.model.paymentaudit.v3.PaymentStatus;
+import com.velopayments.api.model.paymentaudit.v3.QuoteStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,8 +23,7 @@ public class FxSummary {
     private ZonedDateTime expiryTime;
     private UUID quoteId;
     private Long totalSourceAmount;
-    private Long totalPaymentAmount;
-    private String sourceCurrency;
-    private String paymentCurrency;
+    private QuoteStatus status;
+    private PaymentStatus fundingStatus;
 
 }
