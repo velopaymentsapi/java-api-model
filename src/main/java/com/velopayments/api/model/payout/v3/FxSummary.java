@@ -23,6 +23,9 @@ public class FxSummary {
     private ZonedDateTime expiryTime;
     private UUID quoteId;
     private Long totalSourceAmount;
+    private Long totalPaymentAmount;
+    private String sourceCurrency;
+    private String paymentCurrency;
     private QuoteStatus status;
     private PaymentStatus fundingStatus;
 
