@@ -20,6 +20,7 @@ package com.velopayments.api.model.payor;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.velopayments.api.model.ModelTest;
+import com.velopayments.oa3.model.PayorCreateApiKeyRequest;
 import org.apache.commons.io.IOUtils;
 import org.json.JSONException;
 import org.junit.jupiter.api.BeforeEach;
@@ -29,6 +30,7 @@ import org.skyscreamer.jsonassert.JSONAssert;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.util.Arrays;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -37,26 +39,26 @@ class CreateKeyRequestTest extends ModelTest {
     @BeforeEach
     void setUp() throws IOException {
         jsonString = IOUtils.resourceToString("/payor/createKeyRequest.json", Charset.forName("UTF-8"));
+
     }
 
     @DisplayName("Test JSON Parse of Create Key Request")
     @Test
     void testJsonParse() throws IOException {
-        CreateKeyRequest request = objectMapper.readValue(jsonString, CreateKeyRequest.class);
+        PayorCreateApiKeyRequest request = objectMapper.readValue(jsonString, PayorCreateApiKeyRequest.class);
 
         assertThat(request.getName()).isNotBlank();
         assertThat(request.getDescription()).isNotBlank();
-        assertThat(request.roles).isNotEmpty();
+        assertThat(request.getRoles()).isNotEmpty();
     }
 
-    @DisplayName("Test Marshal to JSON for Create Application Request")
+    @DisplayName("Test Marshal to JSON for Create Key Request")
     @Test
     void testJsonMarshal() throws JsonProcessingException, JSONException {
-        CreateKeyRequest request = CreateKeyRequest.builder()
-                .name("foo")
-                .description("a foo key")
-                .roles(new String[]{"foo.role"})
-                .build();
+        PayorCreateApiKeyRequest request = new PayorCreateApiKeyRequest();
+        request.name("foo");
+        request.description("a foo key");
+        request.roles(Arrays.asList(PayorCreateApiKeyRequest.RolesEnum.ADMIN));
 
         String generatedJson = objectMapper.writeValueAsString(request);
 

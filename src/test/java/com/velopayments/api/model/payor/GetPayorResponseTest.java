@@ -19,6 +19,7 @@
 package com.velopayments.api.model.payor;
 
 import com.velopayments.api.model.ModelTest;
+import com.velopayments.oa3.model.PayorV2;
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -39,7 +40,7 @@ class GetPayorResponseTest extends ModelTest {
     @DisplayName("Test JSON Parse of GetPayorResponse")
     @Test
     void testJsonParse() throws IOException {
-        GetPayorResponse response = objectMapper.readValue(jsonString, GetPayorResponse.class);
+        PayorV2 response = objectMapper.readValue(jsonString, PayorV2.class);
 
         assertThat(response.getPayorId()).isNotNull();
         assertThat(response.getPayorName()).isNotBlank();
@@ -59,7 +60,7 @@ class GetPayorResponseTest extends ModelTest {
         assertThat(response.getDbaName()).isNotBlank();
         assertThat(response.getAllowsLanguageChoice()).isFalse();
         assertThat(response.getReminderEmailsOptOut()).isFalse();
-        assertThat(response.getLanguage()).isNotBlank();
+        assertThat(response.getLanguage()).isNotNull();
         assertThat(response.getIncludesReports()).isFalse();
 
     }

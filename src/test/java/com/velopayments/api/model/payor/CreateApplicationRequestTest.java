@@ -18,13 +18,16 @@
 
 package com.velopayments.api.model.payor;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.velopayments.api.model.ModelTest;
+import com.velopayments.oa3.model.PayorCreateApplicationRequest;
 import org.apache.commons.io.IOUtils;
 import org.json.JSONException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.openapitools.jackson.nullable.JsonNullableModule;
 import org.skyscreamer.jsonassert.JSONAssert;
 
 import java.io.IOException;
@@ -42,7 +45,7 @@ class CreateApplicationRequestTest extends ModelTest {
     @DisplayName("Test JSON Parse of Create Application")
     @Test
     void testJsonParse() throws IOException {
-        CreateApplicationRequest request = objectMapper.readValue(jsonString, CreateApplicationRequest.class);
+        PayorCreateApplicationRequest request = objectMapper.readValue(jsonString, PayorCreateApplicationRequest.class);
 
         assertThat(request.getName()).isNotBlank();
         assertThat(request.getDescription()).isNotBlank();
@@ -51,10 +54,10 @@ class CreateApplicationRequestTest extends ModelTest {
     @DisplayName("Test Marshal to JSON for Create Application Request")
     @Test
     void testJsonMarshal() throws JsonProcessingException, JSONException {
-        CreateApplicationRequest request = CreateApplicationRequest.builder()
-                .name("application name")
-                .description("application description")
-                .build();
+        PayorCreateApplicationRequest request = new PayorCreateApplicationRequest();
+
+        request.name("application name");
+        request.description("application description");
 
         String generatedJson = objectMapper.writeValueAsString(request);
 

@@ -18,9 +18,18 @@
 
 package com.velopayments.api.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.jupiter.api.BeforeEach;
+import org.openapitools.jackson.nullable.JsonNullableModule;
 
-public abstract class ModelTest {
+public class ModelTest {
     protected String jsonString;
     protected ObjectMapper objectMapper = new ObjectMapper();
+
+    @BeforeEach
+    void setUpObjectMapper() {
+        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+        objectMapper.registerModule(new JsonNullableModule());
+    }
 }
