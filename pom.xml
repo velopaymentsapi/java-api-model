@@ -208,8 +208,6 @@
                                 <dateLibrary>java8</dateLibrary>
                                 <java8>true</java8>
                                 <useBeanValidation>true</useBeanValidation>
-<!--                                <apiPackage>com.velopayments.oa3.api</apiPackage>-->
-<!--                                <invokerPackage>com.velopayments.oa3.client</invokerPackage>-->
                             </configOptions>
                         </configuration>
                     </execution>

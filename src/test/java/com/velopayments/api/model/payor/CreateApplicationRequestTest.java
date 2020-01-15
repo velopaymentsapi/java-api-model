@@ -18,7 +18,6 @@
 
 package com.velopayments.api.model.payor;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.velopayments.api.model.ModelTest;
 import com.velopayments.oa3.model.PayorCreateApplicationRequest;
@@ -27,7 +26,6 @@ import org.json.JSONException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.openapitools.jackson.nullable.JsonNullableModule;
 import org.skyscreamer.jsonassert.JSONAssert;
 
 import java.io.IOException;
