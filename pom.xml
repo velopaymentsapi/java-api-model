@@ -24,7 +24,7 @@
     <groupId>com.velopayments.api</groupId>
     <artifactId>java-api-model</artifactId>
 
-    <version>2.20.11-SNAPSHOT</version>
+    <version>2.20.11</version>
     <packaging>jar</packaging>
 
     <name>java-api-model</name>
@@ -281,7 +281,7 @@
         <connection>scm:git:https://github.com/velopaymentsapi/java-api-model.git</connection>
         <developerConnection>scm:git:git@github.com:velopaymentsapi/java-api-model.git</developerConnection>
         <url>https://github.com/velopaymentsapi/java-api-model</url>
-        <tag>HEAD</tag>
+        <tag>java-api-model-2.20.11</tag>
     </scm>
 
     <distributionManagement>
